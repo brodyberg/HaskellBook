@@ -36,7 +36,8 @@ import Data.Char
 -- reverse "blah" 
 -- "halb" 
 -- 
-isPalindrome :: (Eq a) => [a] -> Bool
+--isPalindrome :: (Eq a) => [a] -> Bool
+isPalindrome :: [Char] -> Bool
 
 strings = 
     [
