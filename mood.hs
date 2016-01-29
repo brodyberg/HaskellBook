@@ -1,0 +1,11 @@
+module Mood where
+
+data Mood = Blah | Woot deriving Show
+
+-- changeMood :: Mood -> Mood
+-- changeMood Mood = Woot
+-- changeMood _ = Blah
+
+changeMood :: Mood -> Mood
+changeMood Blah = Woot
+changeMood _ = Blah
