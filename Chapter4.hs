@@ -56,5 +56,6 @@ absolute (-9)
 
 -- 10 fill in definition for: 
 f :: (a, b) -> (c, d) -> ((b, d), (a, c))
-f = 
+f left right = ((snd left, snd right), (fst left, fst right))
+ 
     
