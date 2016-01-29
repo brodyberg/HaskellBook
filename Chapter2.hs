@@ -29,3 +29,18 @@ perimeter' x y = x * 2 + y * 2
 -- 3. yes
 -- f x = x / 2 + 9
 -- f x = x / (2 + 9)
+
+foo x =
+    let y = x * 2
+        z = x ^ 2
+    in 2 * y * z 
+    
+-- page 76
+-- 1
+area x = 3.14 * (x * x)
+-- 2
+double x = x * 2
+-- 3
+x = 7
+y = 10
+f = x + y
