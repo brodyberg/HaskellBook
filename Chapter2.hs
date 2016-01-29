@@ -44,3 +44,35 @@ double x = x * 2
 x = 7
 y = 10
 f = x + y
+
+-- pg 86
+-- 1
+just5       = x
+    where x = 5
+-- 2
+just25      = x * x
+    where x = 5
+-- 3
+just30      = x * y
+    where x = 5
+          y = 6
+-- 4
+just6       = x + 3
+    where x = 3
+          y = 1000
+          
+-- pg 94
+-- 4
+
+z' = 7
+x' = y' ^ 2
+y' = z' + 8
+waxOn       = x * 5
+    where x = x' 
+
+waxOn' n = n * 5
+
+triple' x = x * 3
+
+waxOff' x = triple' x
+
