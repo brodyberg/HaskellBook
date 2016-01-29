@@ -51,3 +51,5 @@ module Chapter3 where
 
 take ((length "awesome!") -1) "awesome!"
 take 7 "awesome!"
+
+head (drop 4 n)
