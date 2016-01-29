@@ -14,30 +14,7 @@ import Data.Char
 
 -- 6 / (fromIntegral (length [1, 2, 3]))
 
--- :t fromIntegral
--- fromIntegral :: (Integral a, Num b) => a -> b
--- implies Int is a tuple? 
--- but this fails: 
--- Prelude> let (x,y) = 3
--- 
--- <interactive>:127:5:
---     Non type-variable argument in the constraint: Num (t, t)
---     (Use FlexibleContexts to permit this)
---     When checking that `x' has the inferred type
---       x :: forall t t1. Num (t, t1) => t
-
--- also, we can use div, which does integer division: 
--- div 6 (length [1, 2, 3])
-
--- 8:  Write a function that tells you whether a given 
--- String is a palindrome
-
--- reverse [a] -> [a]
--- reverse "blah" 
--- "halb" 
--- 
---isPalindrome :: (Eq a) => [a] -> Bool
-isPalindrome :: [Char] -> Bool
+-- 8: 
 
 strings = 
     [
@@ -55,17 +32,7 @@ strings =
         "A Toyota! Race fast... safe car: a Toyota",
         "Straw? No, too stupid a fad; I put soot on warts"]
 
--- filter (\item -> item /= ' ') "foo bar"
--- "foobar"
-
--- fails
--- filter (\char -> char >= 'a' || char <= 'Z') "Straw? No, too stupid a fad; I put soot on warts"
--- 
--- :t isAlpha
--- works like a champ: 
--- filter (\char -> isAlpha char) "Straw? No, too stupid a fad; I put soot on warts"
--- "StrawNotoostupidafadIputsootonwarts"
-
+isPalindrome :: [Char] -> Bool
 isPalindrome original = firstHalfOriginal == firstHalfReversed
     where 
 --    let original = "Satan, oscillate my metallic sonatas!"
@@ -75,21 +42,7 @@ isPalindrome original = firstHalfOriginal == firstHalfReversed
         firstHalfOriginal = halfString originalAllAlpha
         firstHalfReversed = halfString reversed
 
---    firstHalfOriginal == firstHalfReversed
-
-
-
--- get reversed item
--- slice out half of given
--- slice out half of reversed
--- compare ==
-    
--- we can slice via take?
--- slice :: Int -> String -> String
--- slice count str =
---     take (div (length str) 
-
---let halfString str = take (div (length str) 2) str
-
--- let ex = "asdfasdfsadfpoupoiupupou"
--- take (div (length ex) 2) ex
+isPalindrome "Go hang a salami; I'm a lasagna hog!"
+-- we don't know yet how to copy/paste multi-line expressions
+-- into the REPL so we can't do a test using foldl which
+-- would prove our code vs. strings above. 
