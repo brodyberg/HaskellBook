@@ -58,4 +58,13 @@ absolute (-9)
 f :: (a, b) -> (c, d) -> ((b, d), (a, c))
 f left right = ((snd left, snd right), (fst left, fst right))
  
-    
+-- Reading syntax
+
+-- 1
+f xs = x w 1 where w = length xs
+-- 2
+(\x -> x) 9
+-- 3
+(\xs -> head xs) [1, 2, 3]
+-- 4
+(f (a, b) = a) (2, 3)
